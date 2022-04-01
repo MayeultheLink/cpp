@@ -3,11 +3,11 @@ O		= objs/
 I		= incs/
 D		= deps/
 
-NAME	= myphonebook
-SRCS	= main.cpp PhoneBook.cpp Contact.cpp
+NAME	= zombies
+SRCS	= main.cpp randomChump.cpp newZombie.cpp Zombie.cpp
 
 CC	= c++
-CFLAGS	+= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror 
 CFLAGS	+= -std=c++98
 CFLAGS	+= -I$I
 
