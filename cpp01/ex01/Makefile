@@ -3,8 +3,8 @@ O		= objs/
 I		= incs/
 D		= deps/
 
-NAME	= zombies
-SRCS	= main.cpp randomChump.cpp newZombie.cpp Zombie.cpp
+NAME	= zombieHorde
+SRCS	= main.cpp zombieHorde.cpp Zombie.cpp
 
 CC	= c++
 CFLAGS	= -Wall -Wextra -Werror 
