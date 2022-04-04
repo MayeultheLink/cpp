@@ -15,7 +15,7 @@ public:
 
 private:
 
-	const std::string name;
+	std::string const name;
 	Weapon *weapon;
 
 };

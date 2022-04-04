@@ -13,6 +13,11 @@ void MyReplace::replace ( void ) {
 	std::string content;
 
 	this->ifs.open(this->fileName);
+	if (!ifs)
+	{
+		std::cerr << "Error while opening file." << std::endl;
+		return ;
+	}
 	content.assign(std::istreambuf_iterator<char>(this->ifs), std::istreambuf_iterator<char>());
 	this->ifs.close();
 
@@ -26,6 +31,11 @@ void MyReplace::replace ( void ) {
 	}
 
 	this->ofs.open(this->newFileName);
+	if (!ofs)
+	{
+		std::cerr << "Error while creating file." << std::endl;
+		return ;
+	}
 	this->ofs << content;
 	this->ofs.close();
 
