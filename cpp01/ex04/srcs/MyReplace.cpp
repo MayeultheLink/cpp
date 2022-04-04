@@ -12,8 +12,9 @@ void MyReplace::replace ( void ) {
 
 	std::string content;
 
-	this->fs.open(this->fileName);
-	content.assign(std::istreambuf_iterator<char>(this->fs), std::istreambuf_iterator<char>());
+	this->ifs.open(this->fileName);
+	content.assign(std::istreambuf_iterator<char>(this->ifs), std::istreambuf_iterator<char>());
+	this->ifs.close();
 
 	for (size_t pos=0; pos < content.length(); pos++)
 	{
@@ -24,7 +25,8 @@ void MyReplace::replace ( void ) {
 		}
 	}
 
-	this->newFs.open(this->newFileName);
-	this->newFs << content;
+	this->ofs.open(this->newFileName);
+	this->ofs << content;
+	this->ofs.close();
 
 }

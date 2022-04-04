@@ -20,8 +20,8 @@ private :
 	std::string toReplace;
 	std::string replacement;
 	std::string newFileName;
-	std::fstream fs;
-	std::ofstream newFs;
+	std::ifstream ifs;
+	std::ofstream ofs;
 
 };
 
