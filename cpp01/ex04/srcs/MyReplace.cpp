@@ -34,6 +34,7 @@ void MyReplace::replace ( void ) {
 	if (!ofs)
 	{
 		std::cerr << "Error while creating file." << std::endl;
+		this->ifs.close();
 		return ;
 	}
 	this->ofs << content;
