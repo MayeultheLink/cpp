@@ -25,7 +25,7 @@ Fixed::Fixed( const float f ) {
 
 	std::cout << "Float constructor called" << std::endl;
 
-	int power = pow(2, this->_b);
+	int power = ft_pow(2, this->_b);
 
 	this->_n = roundf(f * power);
 
@@ -40,7 +40,7 @@ Fixed::~Fixed() {
 float Fixed::toFloat( void ) const {
 
 	float f;
-	int power = pow(2, this->_b);
+	int power = ft_pow(2, this->_b);
 
 	f = (float)this->_n / power;
 	return f;
@@ -80,5 +80,21 @@ std::ostream & operator<<( std::ostream &o, Fixed const &inst ) {
 
 	o << inst.toFloat();
 	return o;
+
+}
+
+int ft_pow(int i, int pow) {
+
+	if (pow < 0)
+		return 0;
+	if (pow == 0)
+		return 1;
+
+	int result = i;
+
+	while (--pow)
+		result *= i;
+
+	return result;
 
 }

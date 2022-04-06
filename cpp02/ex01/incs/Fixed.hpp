@@ -29,5 +29,6 @@ private :
 };
 
 std::ostream & operator<<( std::ostream & o, Fixed const & inst );
+int ft_pow(int i, int pow);
 
 #endif
