@@ -12,7 +12,7 @@ void MyReplace::replace ( void ) {
 
 	std::string content;
 
-	this->ifs.open(this->fileName);
+	this->ifs.open(this->fileName.c_str());
 	if (!ifs)
 	{
 		std::cerr << "Error while opening file." << std::endl;
@@ -30,7 +30,7 @@ void MyReplace::replace ( void ) {
 		}
 	}
 
-	this->ofs.open(this->newFileName);
+	this->ofs.open(this->newFileName.c_str());
 	if (!ofs)
 	{
 		std::cerr << "Error while creating file." << std::endl;
