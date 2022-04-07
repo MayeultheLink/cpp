@@ -4,7 +4,7 @@ I		= incs/
 D		= deps/
 
 NAME	= battle
-SRCS	= main.cpp ClapTrap.cpp
+SRCS	= main.cpp ClapTrap.cpp ScavTrap.cpp
 
 CC	= c++
 CFLAGS	= -Wall -Wextra -Werror 
