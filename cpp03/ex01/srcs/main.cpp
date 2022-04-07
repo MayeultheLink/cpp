@@ -14,6 +14,7 @@ int	main()
 
 	ScavTrap d(c);
 
+//ScavTrap a("mayelu");
 	return 0;
 
 }

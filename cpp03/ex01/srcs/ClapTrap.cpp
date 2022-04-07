@@ -2,26 +2,26 @@
 
 ClapTrap::ClapTrap( const std::string name ) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
 
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap onstructor called" << std::endl;
 
 }
 
 ClapTrap::ClapTrap( const std::string name, int hitPoints, int energyPoints, int attackDamage ) : name(name), hitPoints(hitPoints), energyPoints(energyPoints), attackDamage(attackDamage) {
 
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap constructor called" << std::endl;
 
 }
 
 ClapTrap::ClapTrap( ClapTrap const & src ) {
 
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = src;
 
 }
 
 ClapTrap::~ClapTrap( void ) {
 
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 
 }
 
@@ -50,6 +50,15 @@ void ClapTrap::attack( const std::string & target ) {
 		return;
 	this->energyPoints -= 1;
 	std::cout << this->name << " spends an energy point to attack " << target << ", causing " << this->attackDamage << " points of damage ! " << this->energyPoints << " energy points left..." << std::endl;
+
+}
+
+void ScavTrap::attack( const std::string & target ) {
+
+	if (!this->check())
+		return;
+	this->energyPoints -= 1;
+	std::cout << this->name << " spends an energy point to attack " << target << ", causing " << this->attackDamage << " points of damage ! This is so much damage !! " << this->energyPoints << " energy points left for this incredibly strong player..." << std::endl;
 
 }
 

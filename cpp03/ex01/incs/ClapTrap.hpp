@@ -24,8 +24,6 @@ protected :
 	int energyPoints;
 	int attackDamage;
 
-private :
-
 	bool check( void ) const;
 
 };
@@ -38,6 +36,7 @@ public :
 	ScavTrap( ScavTrap const & src );
 	~ScavTrap( void );
 
+	void attack( const std::string & target );
 	void guardGate( void );
 
 };
