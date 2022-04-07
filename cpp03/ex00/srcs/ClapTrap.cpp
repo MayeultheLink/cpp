@@ -31,7 +31,7 @@ void ClapTrap::attack( const std::string & target ) {
 void ClapTrap::takeDamage( unsigned int amount ) {
 
 	this->hitPoints -= amount;
-	std::cout << this->name << " takes " << amount << " of damage ! " << this->hitPoints << " hit points left..." << std::endl;
+	std::cout << this->name << " takes " << amount << " of damage ! " << ((this->hitPoints > 0) ? this->hitPoints : 0) << " hit points left..." << std::endl;
 
 }
 
@@ -47,9 +47,9 @@ void ClapTrap::beRepaired( unsigned int amount ) {
 
 bool ClapTrap::check( void ) const {
 
-	if (!this->energyPoints)
+	if (this->hitPoints <= 0)
 	{
-		std::cout << this->name << " don't have any energy points left to attack !" << std::endl;
+		std::cout << "Come on, " << this->name << ", you can't attack people when you're dead..." << std::endl;
 		return false;
 	}
 	if (!this->energyPoints)
