@@ -35,6 +35,8 @@ void	PhoneBook::searchContact(void) const
 	std::cout << std::endl << "// Please enter the contact's index to get his informations. //" << std::endl << std::endl << "> ";
 	std::string index;
 	getline(std::cin, index);
+	if (std::cin.eof())
+		return;
 
 	std::stringstream	ss;
 	int	i = 0;
@@ -46,6 +48,8 @@ void	PhoneBook::searchContact(void) const
 		std::cout << std::endl << "// Your index is invalid ! Please try again. //" << std::endl << std::endl << "> ";
 		std::string().swap(index);
 		getline(std::cin, index);
+		if (std::cin.eof())
+			return;
 		ss.clear();
 		ss.str("");
 		ss << index;

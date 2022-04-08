@@ -27,6 +27,8 @@ void	Contact::getInfo(int i)
 	{
 		std::cout << "First Name > ";
 		std::getline (std::cin, info);
+		if (std::cin.eof())
+			return;
 	}
 	this->firstName = info;
 	info = "";
@@ -34,6 +36,8 @@ void	Contact::getInfo(int i)
 	{
 		std::cout << "Last Name > ";
 		std::getline (std::cin, info);
+		if (std::cin.eof())
+			return;
 	}
 	this->lastName = info;
 	info = "";
@@ -41,6 +45,8 @@ void	Contact::getInfo(int i)
 	{
 		std::cout << "Nickname > ";
 		std::getline (std::cin, info);
+		if (std::cin.eof())
+			return;
 	}
 	this->nickname = info;
 	info = "";
@@ -48,6 +54,8 @@ void	Contact::getInfo(int i)
 	{
 		std::cout << "Phone Number > ";
 		std::getline (std::cin, info);
+		if (std::cin.eof())
+			return;
 	}
 	this->phoneNumber = info;
 	info = "";
@@ -55,6 +63,8 @@ void	Contact::getInfo(int i)
 	{
 		std::cout << "Darkest Secret > ";
 		std::getline (std::cin, info);
+		if (std::cin.eof())
+			return;
 	}
 	this->darkestSecret = info;
 	std::cout << std::endl << std::endl << "// Thank you ! The entry has been successfully created. //" << std::endl << std::endl;

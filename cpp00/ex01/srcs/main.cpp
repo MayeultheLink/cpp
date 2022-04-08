@@ -8,10 +8,15 @@ int	main(void)
 
 	while (1)
 	{
-		std::cout << "> ";
-		std::getline (std::cin, buf);
+		if (!std::cin.eof())
+		{
+			std::cout << "> ";
+			std::getline (std::cin, buf);
+		}
 
-		if (buf == "ADD")
+		if (std::cin.eof() || buf == "EXIT")
+			break;
+		else if (buf == "ADD")
 		{
 			repertoire.createContact(i);
 			i++;
@@ -20,8 +25,6 @@ int	main(void)
 		}
 		else if (buf == "SEARCH")
 			repertoire.searchContact();
-		else if (buf == "EXIT")
-			break;
 	}
 	return 0;
 }
