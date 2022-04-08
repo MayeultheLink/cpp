@@ -23,35 +23,35 @@ void	Contact::getInfo(int i)
 	this->index = i + 1;
 
 	std::cout << std::endl << "// New entry ! Please enter his or her informations. //" << std::endl << std::endl;
-	while ((int)info.length() == (int)count_if(info.begin(), info.end(), my_isspace))
+	while ((int)info.length() == count_if(info.begin(), info.end(), my_isspace))
 	{
 		std::cout << "First Name > ";
 		std::getline (std::cin, info);
 	}
 	this->firstName = info;
 	info = "";
-	while ((int)info.length() == (int)count_if(info.begin(), info.end(), my_isspace))
+	while ((int)info.length() == count_if(info.begin(), info.end(), my_isspace))
 	{
 		std::cout << "Last Name > ";
 		std::getline (std::cin, info);
 	}
 	this->lastName = info;
 	info = "";
-	while ((int)info.length() == (int)count_if(info.begin(), info.end(), my_isspace))
+	while ((int)info.length() == count_if(info.begin(), info.end(), my_isspace))
 	{
 		std::cout << "Nickname > ";
 		std::getline (std::cin, info);
 	}
 	this->nickname = info;
 	info = "";
-	while ((int)info.length() == (int)count_if(info.begin(), info.end(), my_isspace))
+	while ((int)info.length() == count_if(info.begin(), info.end(), my_isspace))
 	{
 		std::cout << "Phone Number > ";
 		std::getline (std::cin, info);
 	}
 	this->phoneNumber = info;
 	info = "";
-	while ((int)info.length() == (int)count_if(info.begin(), info.end(), my_isspace))
+	while ((int)info.length() == count_if(info.begin(), info.end(), my_isspace))
 	{
 		std::cout << "Darkest Secret > ";
 		std::getline (std::cin, info);

@@ -46,7 +46,8 @@ void	PhoneBook::searchContact(void) const
 		std::cout << std::endl << "// Your index is invalid ! Please try again. //" << std::endl << std::endl << "> ";
 		std::string().swap(index);
 		getline(std::cin, index);
-		std::stringstream().swap(ss);
+		ss.clear();
+		ss.str("");
 		ss << index;
 		ss >> i;
 	}
