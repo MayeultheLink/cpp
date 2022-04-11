@@ -21,6 +21,8 @@ Cat & Cat::operator=( Cat const & rhs ) {
 
 	this->sound = rhs.sound;
 	this->brain = new Brain;
+	for (int i=0; i < 100; i++)
+		this->brain->ideas[i] = rhs.brain->ideas[i];
 	return *this;
 
 }
