@@ -12,11 +12,11 @@ public :
 	~WrongCat( void );
 	WrongCat & operator=( WrongCat const & rhs );
 
+	void makeSound( void ) const;
+
 private :
 
 	std::string sound;
-
-	void makeSound( void ) const;
 
 };
 

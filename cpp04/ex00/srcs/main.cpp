@@ -52,6 +52,14 @@ int	main()
 
 	std::cout << std::endl;
 
+	std::cout << "-----------> WrongCat WrongCat(); <------------" << std::endl << std::endl;
+
+	WrongCat cat5;
+	std::cout << cat5.getType() << " goes :" << std::endl;
+	cat5.makeSound();
+
+	std::cout << std::endl;
+
 
 /*
 	std::cout << "-----------> const Animal animal; <------------" << std::endl << std::endl;
