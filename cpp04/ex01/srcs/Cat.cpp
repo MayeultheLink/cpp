@@ -1,9 +1,8 @@
 #include "Cat.hpp"
 
-Cat::Cat( void ) : Animal("Cat"), sound("Meow")
+Cat::Cat( void ) : Animal("Cat"), sound("Meow"), brain(new Brain())
 {
 	std::cout << "Cat default constructor called" << std::endl;
-	this->brain = new Brain();
 }
 
 Cat::Cat( Cat const & src ) : Animal(src)
@@ -21,6 +20,7 @@ Cat::~Cat( void )
 Cat & Cat::operator=( Cat const & rhs ) {
 
 	this->sound = rhs.sound;
+	this->brain = new Brain;
 	return *this;
 
 }
