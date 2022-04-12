@@ -68,13 +68,25 @@ void Fixed::setRawBits( int const raw ) {
 
 }
 
-Fixed Fixed::min( Fixed a, Fixed b ) {
+Fixed & Fixed::min( Fixed & a, Fixed & b ) {
 
 	return ((a._n < b._n) ? a : b);
 
 }
 
-Fixed Fixed::max( Fixed a, Fixed b ) {
+Fixed & Fixed::max( Fixed & a, Fixed & b ) {
+
+	return ((a._n > b._n) ? a : b);
+
+}
+
+const Fixed & Fixed::min( const Fixed & a, const Fixed & b ) {
+
+	return ((a._n < b._n) ? a : b);
+
+}
+
+const Fixed & Fixed::max( const Fixed & a, const Fixed & b ) {
 
 	return ((a._n > b._n) ? a : b);
 
