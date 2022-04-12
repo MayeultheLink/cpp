@@ -32,3 +32,15 @@ void Cat::makeSound( void ) const {
 	std::cout << this->sound << std::endl;
 
 }
+
+void Cat::setIdeas( std::string ideas ) {
+
+	this->brain->ideas[0] = ideas;
+
+}
+
+void Cat::getIdeas( void ) const {
+
+	std::cout << this->brain->ideas[0] << std::endl;
+
+}

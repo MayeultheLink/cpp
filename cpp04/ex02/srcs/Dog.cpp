@@ -32,3 +32,15 @@ void Dog::makeSound( void ) const {
 	std::cout << this->sound << std::endl;
 
 }
+
+void Dog::setIdeas( std::string ideas ) {
+
+	this->brain->ideas[0] = ideas;
+
+}
+
+void Dog::getIdeas( void ) const {
+
+	std::cout << this->brain->ideas[0] << std::endl;
+
+}

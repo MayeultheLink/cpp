@@ -13,12 +13,15 @@ public :
 	Animal & operator=( Animal const & rhs );
 	virtual ~Animal( void );
 
+	virtual void makeSound( void ) const = 0;
 	std::string const & getType( void ) const;
+
+	virtual void setIdeas( std::string ideas );
+	virtual void getIdeas( void ) const;
 
 protected :
 
 	Animal( std::string type );
-	virtual void makeSound( void ) const = 0;
 
 	std::string type;
 

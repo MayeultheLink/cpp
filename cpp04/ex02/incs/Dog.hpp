@@ -12,6 +12,9 @@ public :
 	~Dog( void );
 	Dog & operator=( Dog const & rhs );
 
+	virtual void setIdeas( std::string ideas );
+	virtual void getIdeas( void ) const;
+
 private :
 
 	std::string sound;
