@@ -16,6 +16,9 @@ public :
 	virtual void makeSound( void ) const;
 	std::string const & getType( void ) const;
 
+	virtual void setIdeas( std::string ideas );
+	virtual void getIdeas( void ) const;
+
 protected :
 
 	Animal( std::string type );

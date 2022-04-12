@@ -12,6 +12,9 @@ public :
 	~Cat( void );
 	Cat & operator=( Cat const & rhs );
 
+	virtual void setIdeas( std::string ideas );
+	virtual void getIdeas( void ) const;
+
 private :
 
 	std::string sound;
