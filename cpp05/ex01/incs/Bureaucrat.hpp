@@ -21,14 +21,14 @@ public :
 	void increment( void );
 	void decrement( void );
 
-	void signForm( const Form & form );
+	void signForm( const Form & form ) const;
 
 private :
 
 	const std::string _name;
 	int _grade;
 
-	void checkGrade( void );
+	void checkGrade( void ) const;
 
 class GradeTooHighException : public std::exception {
 

@@ -42,7 +42,7 @@ bool const & Form::getSign( void ) const {
 
 }
 
-void Form::checkGrade( void ) {
+void Form::checkGrade( void ) const {
 
 	if (this->_gradeSign > 150)
 		throw Form::GradeTooLowException();

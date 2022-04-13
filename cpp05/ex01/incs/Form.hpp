@@ -29,7 +29,7 @@ private :
 	const int _gradeExe;
 	bool _sign;
 
-	void checkGrade( void );
+	void checkGrade( void ) const;
 
 class GradeTooHighException : public std::exception {
 

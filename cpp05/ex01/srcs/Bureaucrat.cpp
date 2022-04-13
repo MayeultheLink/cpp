@@ -44,7 +44,7 @@ void Bureaucrat::decrement( void ) {
 
 }
 
-void Bureaucrat::checkGrade( void ) {
+void Bureaucrat::checkGrade( void ) const {
 
 	if (this->_grade > 150)
 		throw Bureaucrat::GradeTooLowException();
@@ -53,7 +53,7 @@ void Bureaucrat::checkGrade( void ) {
 
 }
 
-void Bureaucrat::signForm( const Form & form ) {
+void Bureaucrat::signForm( const Form & form ) const {
 
 	if (form.getSign())
 		std::cout << this->_name << " signed " << form.getName() << std::endl;
