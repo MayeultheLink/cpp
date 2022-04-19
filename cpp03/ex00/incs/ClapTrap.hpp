@@ -7,7 +7,7 @@ class	ClapTrap {
 
 public :
 
-	ClapTrap( const std::string name );
+	ClapTrap( const std::string & name );
 	ClapTrap( ClapTrap const & src );
 	~ClapTrap( void );
 

@@ -7,8 +7,8 @@ class ClapTrap {
 
 public :
 
-	ClapTrap( const std::string name );
-	ClapTrap( const std::string name, int hitPoints, int energyPoints, int attackDamage );
+	ClapTrap( const std::string & name );
+	ClapTrap( const std::string & name, int hitPoints, int energyPoints, int attackDamage );
 	ClapTrap( ClapTrap const & src );
 	ClapTrap & operator=( ClapTrap const & rhs );
 	~ClapTrap( void );
