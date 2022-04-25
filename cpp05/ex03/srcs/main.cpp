@@ -2,7 +2,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
-#include ""
+#include "Intern.hpp"
 
 int main()
 {
@@ -324,6 +324,24 @@ catch (std::exception & e)
 delete pardon;
 }
 
+
+std::cout << std::endl << "intern creates form and lvl 1 signs and execute : " << std::endl;
+Intern randomIntern;
+Form *form;
+
+form = randomIntern.makeForm("robotomy request", "Bender");
+Bureaucrat executor("mayeul", 1);
+try
+{
+	form->beSigned(executor);
+	form->execute(executor);
+}
+catch (std::exception & e)
+{
+	std::cout << executor.getName() << " : " << e.what() << form->getName() << std::endl;
+}
+
+delete form;
 
 	return 0;
 }
