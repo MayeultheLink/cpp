@@ -12,7 +12,6 @@ int	main()
 	c.attack("Aragorn");
 	d.attack("Aragorn");
 
-//ScavTrap a("mayelu");
 	return 0;
 
 }

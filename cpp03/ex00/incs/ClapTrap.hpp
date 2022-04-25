@@ -7,9 +7,12 @@ class	ClapTrap {
 
 public :
 
+	ClapTrap( void );
 	ClapTrap( const std::string & name );
 	ClapTrap( ClapTrap const & src );
 	~ClapTrap( void );
+
+	ClapTrap & operator=( ClapTrap const & rhs );
 
 	void attack(const std::string & target );
 	void takeDamage(unsigned int amount);
@@ -23,8 +26,6 @@ private :
 	int attackDamage;
 
 	bool check( void ) const;
-
-	ClapTrap & operator=( ClapTrap const & rhs );
 
 };
 
