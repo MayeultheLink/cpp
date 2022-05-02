@@ -147,7 +147,7 @@ void printChar( char c ) {
 void printInt( int c ) {
 
 	std::cout << "char: ";
-	if ((static_cast<int>(c) >= 0 && static_cast<int>(c) <= 256 && !isprint(c)) || static_cast<int>(c) > 255)
+	if ((c >= 0 && c <= 255 && !isprint(c)) || c > 255)
 		std::cout << "Non displayable" << std::endl;
 	else
 		std::cout << static_cast<char>(c) << std::endl;
@@ -163,7 +163,7 @@ void printInt( int c ) {
 void printFloat( float c ) {
 
 	std::cout << "char: ";
-	if (c >= 0 && c <= 255 && !isprint(c))
+	if ((c >= 0 && c <= 255 && !isprint(c)) || (c > 255 && c <= std::numeric_limits<int>::max()))
 		std::cout << "Non displayable" << std::endl;
 	else if (c > std::numeric_limits<int>::max() || c < std::numeric_limits<int>::min() || isnan(c))
 		std::cout << "impossible" << std::endl;
@@ -184,7 +184,7 @@ void printFloat( float c ) {
 void printDouble( double c ) {
 
 	std::cout << "char: ";
-	if (c >= 0 && c <= 255 && !isprint(c))
+	if ((c >= 0 && c <= 255 && !isprint(c)) || (c > 255 && c <= std::numeric_limits<int>::max()))
 		std::cout << "Non displayable" << std::endl;
 	else if (c > std::numeric_limits<int>::max() || c < std::numeric_limits<int>::min() || isnan(c))
 		std::cout << "impossible" << std::endl;
