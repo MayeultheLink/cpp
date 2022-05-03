@@ -329,7 +329,7 @@ std::cout << std::endl << "intern creates form and lvl 1 signs and execute : " <
 Intern randomIntern;
 Form *form;
 
-form = randomIntern.makeForm("robotomy request", "Bender");
+form = randomIntern.makeForm("Presidential pardOn", "Bender");
 Bureaucrat executor("mayeul", 1);
 try
 {

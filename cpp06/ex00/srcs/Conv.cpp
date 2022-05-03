@@ -7,8 +7,13 @@ Conv::Conv( const Conv & src )
 	*this = src;
 }
 
-Conv & Conv::operator=( const Conv & )
+Conv & Conv::operator=( const Conv & rhs)
 {
+	this->type = rhs.type;
+	this->charValue = rhs.charValule;
+	this->intValue = rhs.intValue;
+	this->floatValue = rhs.floatValue;
+	this->doubleValue = rhs.doubleValue;
 	return *this;
 }
 
