@@ -10,7 +10,7 @@ Conv::Conv( const Conv & src )
 Conv & Conv::operator=( const Conv & rhs)
 {
 	this->type = rhs.type;
-	this->charValue = rhs.charValule;
+	this->charValue = rhs.charValue;
 	this->intValue = rhs.intValue;
 	this->floatValue = rhs.floatValue;
 	this->doubleValue = rhs.doubleValue;

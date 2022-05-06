@@ -31,8 +31,12 @@ int main()
 	Data*	ptr;
 	ptr = new Data;
 
+	ptr->g = 10;
+
 	std::cout << ptr << std::endl;
 	std::cout << deserialize(serialize(ptr)) << std::endl;
+
+	std::cout << ptr->g << std::endl;
 
 	delete ptr;
 
