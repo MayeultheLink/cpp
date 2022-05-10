@@ -1,24 +1,32 @@
-//#include ""
 #include <iostream>
 
-template <typename T, typename U, typename V>
-void iter(T tab, U size, V *ft)
+template <typename T>
+void iter(T *tab, unsigned int size, void (*ft)(T const &))
 {
-	for (U count=0; count < size; count++)
-		tab[count] = ft(tab[count]);
+	for (unsigned int count=0; count < size; count++)
+		ft(tab[count]);
 }
 
-char ft_toupper(char c)
-{
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return c;
-}
+class Awesome {
+	public :
+		Awesome( void ) : _n(42) { return; }
+		int get( void ) const { return this->_n; }
+	private :
+		int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs ) { o << rhs.get(); return o; }
+
+template<typename T>
+void print( T const & x ) { std::cout << x << std::endl; return; }
 
 int main()
 {
-	char str[6] = "salut";
+	int tab[] = {0, 1, 2, 3, 4};
+	Awesome tab2[5];
 
-	iter(str, 5, ft_toupper);
-	std::cout << str << std::endl;
+	iter(tab, 5, print);
+	iter(tab2, 5, print);
+
+	return 0;
 }
