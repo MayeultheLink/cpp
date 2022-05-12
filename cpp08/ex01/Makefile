@@ -8,7 +8,7 @@ SRCS	= main.cpp Span.cpp
 
 CC	= c++
 CFLAGS	= -Wall -Wextra -Werror 
-CFLAGS	+= -std=c++98
+#CFLAGS	+= -std=c++98
 CFLAGS	+= -I$I
 
 SRCS	:= $(foreach file,$(SRCS),$S$(file))

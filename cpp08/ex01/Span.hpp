@@ -16,6 +16,8 @@ public :
 	Span & operator=( Span const & rhs );
 
 	void addNumber( int i );
+	void randomGenerator( void );
+	void fillWithRange( std::vector<int>::iterator, std::vector<int>::iterator );
 	int shortestSpan();
 	int longestSpan();
 

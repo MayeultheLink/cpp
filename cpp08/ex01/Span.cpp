@@ -58,3 +58,18 @@ int Span::shortestSpan() {
 	return result;
 
 }
+
+void Span::randomGenerator() {
+	srand(time(NULL));
+	while (this->_container.size() < this->_size)
+		this->_container.push_back(rand());
+}
+
+void Span::fillWithRange(std::vector<int>::iterator begin, std::vector<int>::iterator end) {
+	while (begin != end) {
+		if (this->_container.size() >= this->_size)
+			throw Span::containerIsFull();
+		this->_container.push_back(*begin);
+		begin++;
+	}
+}

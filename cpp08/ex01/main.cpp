@@ -26,6 +26,7 @@ int main()
 	}
 }
 
+{
 Span sp = Span(5);
 sp.addNumber(6);
 sp.addNumber(3);
@@ -34,6 +35,25 @@ sp.addNumber(9);
 sp.addNumber(11);
 std::cout << sp.shortestSpan() << std::endl;
 std::cout << sp.longestSpan() << std::endl;
+}
+
+{
+Span sp(10000);
+sp.randomGenerator();
+std::cout << sp.shortestSpan() << std::endl;
+std::cout << sp.longestSpan() << std::endl;
+}
+
+{
+std::vector<int> vect;
+for (int i=0; i < 100; i++)
+	vect.push_back(i);
+Span sp(5000);
+sp.fillWithRange(vect.begin(), vect.end());
+sp.addNumber(1000);
+std::cout << sp.shortestSpan() << std::endl;
+std::cout << sp.longestSpan() << std::endl;
+}
 
 	return 0;
 }
