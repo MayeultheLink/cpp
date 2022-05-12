@@ -3,8 +3,8 @@ O		= objs/
 I		= ./
 D		= deps/
 
-NAME	= easyfind
-SRCS	= main.cpp
+NAME	= span
+SRCS	= main.cpp Span.cpp
 
 CC	= c++
 CFLAGS	= -Wall -Wextra -Werror 
